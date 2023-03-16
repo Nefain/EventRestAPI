@@ -9,5 +9,7 @@
         public string Description { get; set; }
         public Guid Imgid { get; set; }
         public Guid Spaceid { get; set; }
+        public List<Tiket> TiketList { get; set; }
+        public bool IsOpen { get; set; }
     }
 }

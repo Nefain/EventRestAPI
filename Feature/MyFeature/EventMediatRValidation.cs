@@ -110,10 +110,11 @@ namespace MyFeature.Feature.MyFeature
     { 
         public EventsValidator()
         {
+            CascadeMode = CascadeMode.StopOnFirstFailure;
             var msg = "Ошибка в поле {PropertyName}: значение {PropertyValue}";
 
             RuleFor(c => c.idEvent)
-                .NotEmpty().NotNull().WithMessage(msg); ;
+                .NotEmpty().NotNull().WithMessage(msg);
             RuleFor(c => c.Name)
                 .Must(c => c.All(Char.IsLetter)).WithMessage(msg);
             RuleFor(c => c.Description)
@@ -129,6 +130,4 @@ namespace MyFeature.Feature.MyFeature
         }
 
     }
-
-   
 }

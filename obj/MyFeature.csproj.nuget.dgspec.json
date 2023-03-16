@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ростислав\\source\\repos\\MyFeature\\MyFeature.csproj": {}
+    "C:\\Users\\Ростислав\\Documents\\GitHub\\EventRestAPI\\MyFeature.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ростислав\\source\\repos\\MyFeature\\MyFeature.csproj": {
+    "C:\\Users\\Ростислав\\Documents\\GitHub\\EventRestAPI\\MyFeature.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ростислав\\source\\repos\\MyFeature\\MyFeature.csproj",
+        "projectUniqueName": "C:\\Users\\Ростислав\\Documents\\GitHub\\EventRestAPI\\MyFeature.csproj",
         "projectName": "MyFeature",
-        "projectPath": "C:\\Users\\Ростислав\\source\\repos\\MyFeature\\MyFeature.csproj",
+        "projectPath": "C:\\Users\\Ростислав\\Documents\\GitHub\\EventRestAPI\\MyFeature.csproj",
         "packagesPath": "C:\\Users\\Ростислав\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ростислав\\source\\repos\\MyFeature\\obj\\",
+        "outputPath": "C:\\Users\\Ростислав\\Documents\\GitHub\\EventRestAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
