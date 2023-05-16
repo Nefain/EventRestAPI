@@ -22,8 +22,7 @@ namespace MyFeature.Feature.MyFeature
         }
 
         // GET: api/<MyFeatureController>
-        [HttpGet]
-        [Route("")]
+        [HttpGet("Get")]
         [SwaggerOperation(Summary = "Get all events", Description = "Get a list of all Events")]
         [SwaggerResponse(200, "OK", typeof(IEnumerable<List<Events>>))]
         [SwaggerResponse(400, "Validation failed", null)]
@@ -43,12 +42,11 @@ namespace MyFeature.Feature.MyFeature
         }
 
         // GET api/<MyFeatureController>/5
-        [HttpGet]
-        [Route("{id}")]
+        [HttpGet("Get/{id}")]
         [SwaggerOperation(Summary = "Get all events", Description = "Get a list of all Events")]
         [SwaggerResponse(200, "OK", typeof(IEnumerable<List<Events>>))]
         [SwaggerResponse(400, "Validation failed", null)]
-        public async Task<IActionResult> Get(Guid id)
+        public async Task<IActionResult> GetById(Guid id)
         {
             var request = new GetEvent.Request
             {
@@ -68,8 +66,7 @@ namespace MyFeature.Feature.MyFeature
         }
 
         // POST api/<MyFeatureController>
-        [HttpPost]
-        [Route("")]
+        [HttpPost("Post")]
         [SwaggerOperation(Summary = "Add Event", Description = "Adding new Event in List")]
         [SwaggerResponse(200, "OK", null)]
         [SwaggerResponse(400, "Validation failed", null)]
@@ -93,18 +90,17 @@ namespace MyFeature.Feature.MyFeature
 
         }
 
-        // PUT api/<MyFeatureController>/5
-        [HttpPut]
-        [Route("{id}")]
+        // PUT api/<MyFeatureController>
+        [HttpPut("Put")]
         [SwaggerOperation(Summary = "Change Event", Description = "Change Event by id")]
         //[SwaggerParameter()]
         [SwaggerResponse(200, "OK", typeof(IEnumerable<List<Events>>))]
         [SwaggerResponse(400, "Validation failed", null)]
-        public async Task<IActionResult> Put(Guid id, [FromBody] Events editEvent)
+        public async Task<IActionResult> Put([FromBody] Events editEvent)
         {
             var command = new EventMediatRValidation.Command
             {
-                eveId = id,
+                eveId = editEvent.idEvent,
                 chgEvent = editEvent,
                 ChangeEvent = true,
             };
@@ -121,8 +117,7 @@ namespace MyFeature.Feature.MyFeature
         }
 
         // DELETE api/<MyFeatureController>/5
-        [HttpDelete]
-        [Route("{id}")]
+        [HttpDelete("Delete/{id}")]
         [SwaggerOperation(Summary = "Delete Event", Description = "Delete Event by id")]
         [SwaggerResponse(200, "OK", null )]
         [SwaggerResponse(400, "Validation failed", null)]

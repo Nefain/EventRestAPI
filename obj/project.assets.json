@@ -52,6 +52,19 @@
           }
         }
       },
+      "JetBrains.Annotations/2022.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {
+            "related": ".deps.json;.xml"
+          }
+        }
+      },
       "MediatR/12.0.1": {
         "type": "package",
         "dependencies": {
@@ -276,6 +289,28 @@
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
+    "JetBrains.Annotations/2022.3.1": {
+      "sha512": "11nsS3+lFICGkztVs9PP2NRItxf9fF+qD6xEW/T0YGto52zj07wseUeBdMAU1ah9HNVTDZyRC1u4NWdtJScwhw==",
+      "type": "package",
+      "path": "jetbrains.annotations/2022.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "jetbrains.annotations.2022.3.1.nupkg.sha512",
+        "jetbrains.annotations.nuspec",
+        "lib/net20/JetBrains.Annotations.dll",
+        "lib/net20/JetBrains.Annotations.xml",
+        "lib/netstandard1.0/JetBrains.Annotations.deps.json",
+        "lib/netstandard1.0/JetBrains.Annotations.dll",
+        "lib/netstandard1.0/JetBrains.Annotations.xml",
+        "lib/netstandard2.0/JetBrains.Annotations.deps.json",
+        "lib/netstandard2.0/JetBrains.Annotations.dll",
+        "lib/netstandard2.0/JetBrains.Annotations.xml",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.dll",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.xml"
       ]
     },
     "MediatR/12.0.1": {
@@ -715,6 +750,7 @@
     "net7.0": [
       "FluentValidation >= 11.5.1",
       "FluentValidation.AspNetCore >= 11.2.2",
+      "JetBrains.Annotations >= 2022.3.1",
       "MediatR >= 12.0.1",
       "MediatR.Extensions.FluentValidation.AspNetCore >= 4.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0",
@@ -773,6 +809,10 @@
           "FluentValidation.AspNetCore": {
             "target": "Package",
             "version": "[11.2.2, )"
+          },
+          "JetBrains.Annotations": {
+            "target": "Package",
+            "version": "[2022.3.1, )"
           },
           "MediatR": {
             "target": "Package",

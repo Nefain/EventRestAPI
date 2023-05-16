@@ -37,11 +37,7 @@ namespace MyFeature
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-            });
-            app.Run(async (context) =>
-            {
-                context.Response.Redirect("/swagger");
-                await Task.CompletedTask;
+                c.RoutePrefix = string.Empty;
             });
             app.UseRouting();
             app.UseEndpoints(endpoints =>
